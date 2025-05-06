@@ -1,0 +1,22 @@
+int touch=7;
+int led=LED_BUILTIN;
+void setup() 
+{
+ pinMode(touch, INPUT);
+ pinMode(led,OUTPUT);
+}
+
+void loop() 
+{
+ 
+int data = digitalRead(touch);
+Serial.println(data);
+if(data){
+  digitalWrite(led,HIGH);
+}
+else
+{
+  digitalWrite(led,LOW);
+}
+Serial.println(data);
+}
