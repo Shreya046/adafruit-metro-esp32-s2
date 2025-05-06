@@ -1,0 +1,11 @@
+int touch=7;
+void setup() 
+{
+ pinMode(touch, INPUT);
+}
+
+void loop() 
+{
+int data = digitalRead(touch);
+Serial.println(data);
+}
