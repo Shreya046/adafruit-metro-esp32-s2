@@ -17,10 +17,12 @@
 #include <NetworkUdp.h>
 #include <ArduinoOTA.h>
 
-const char *ssid = "-------";
-const char *password = "--------";
+const char *ssid = "iPhone ;)";
+const char *password = "snayak30";
+int led = LED_BUILTIN;
 
 void setup() {
+  pinMode(led, OUTPUT);
   Serial.begin(115200);
   Serial.println("Booting");
   WiFi.mode(WIFI_STA);
@@ -85,5 +87,9 @@ void setup() {
 }
 
 void loop() {
+  digitalWrite(led, HIGH);
+  delay(2000);
+  digitalWrite(led, LOW);
+  delay(2000);
   ArduinoOTA.handle();
 }
